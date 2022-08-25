@@ -1,0 +1,84 @@
+{
+	"services": [
+		{
+			"title": "Armado de computadoras",
+			"description": "Armamos computadoras",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Actualización de equipos",
+			"description": "Actualizamos equipos",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Soporte Tecnico Remoto",
+			"description": "Hacemos llamadas en remoto",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Instalación de antivirus",
+			"description": "Combati los virus con ESET",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Formateo",
+			"description": "Formateamos tu pc",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Instalación de sistemas operativos",
+			"description": "Te instalamos tu Sistema Operativo favorito",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Instalación de programas",
+			"description": "Office, excel, word...",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Limpieza y mantenimiento",
+			"description": "Cambio de pasta termica",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Backup (copia de seguridad)",
+			"description": "Almacenamos tus datos",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		},
+		{
+			"title": "Recuperación de datos",
+			"description": "recuperamos tus datos de discos rigidos, solidos, pendrives, etc",
+			"images": [
+				"./assets/destination/image-moon.png",
+				"./assets/destination/image-moon.webp"
+			]
+		}
+	]
+}
