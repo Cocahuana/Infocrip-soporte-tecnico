@@ -1,17 +1,19 @@
-import './App.css';
-import { Box } from "@chakra-ui/react"
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Home from './components/Home';
 function App () {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-
-      <Box color='gray.50' />
-
-      <Box color='#f00' />
-
-      <Box bg='tomato' w='100px' h='100px' />
-
-      <Box backgroundColor='tomato' />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={ <Home /> }>
+          </Route>
+        </Routes>
+      </BrowserRouter>,
     </div>
   );
 }
