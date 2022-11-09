@@ -9,10 +9,14 @@ import {
 	useDisclosure,
 } from "@chakra-ui/react";
 import {ChevronDownIcon} from "@chakra-ui/icons";
+import {useContext} from "react";
+import {themeContext} from "../../context/themeContext";
 
 export const MobileNavItem = ({label, children, href}) => {
 	const {isOpen, onToggle} = useDisclosure();
 
+	const myTheme = useContext(themeContext);
+	const {text, accent1} = myTheme;
 	return (
 		<Stack spacing={4} onClick={children && onToggle}>
 			<Flex
@@ -25,8 +29,8 @@ export const MobileNavItem = ({label, children, href}) => {
 					textDecoration: "none",
 				}}>
 				<Text
-					fontWeight={600}
-					color={useColorModeValue("gray.600", "gray.200")}>
+					fontWeight={700}
+					color={useColorModeValue(text.secondary, text.base)}>
 					{label}
 				</Text>
 				{children && (
@@ -49,7 +53,7 @@ export const MobileNavItem = ({label, children, href}) => {
 					pl={4}
 					borderLeft={1}
 					borderStyle={"solid"}
-					borderColor={useColorModeValue("gray.200", "gray.700")}
+					borderColor={useColorModeValue(accent1, "gray.700")}
 					align={"start"}>
 					{children &&
 						children.map((child) => (
