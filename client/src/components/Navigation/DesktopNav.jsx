@@ -8,11 +8,15 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 import {DesktopSubNav} from "./DesktopSubNab";
+import {useContext} from "react";
+import {themeContext} from "../../context/themeContext";
 export const DesktopNav = (props) => {
 	const {NAV_ITEMS} = props;
-	const linkColor = useColorModeValue("gray.600", "gray.200");
-	const linkHoverColor = useColorModeValue("gray.800", "white");
-	const popoverContentBgColor = useColorModeValue("white", "gray.800");
+	const myTheme = useContext(themeContext);
+	const {background, text} = myTheme;
+	const linkColor = useColorModeValue(text.base, text.secondary);
+	const linkHoverColor = useColorModeValue(text.secondary, text.base);
+	const popoverContentBgColor = useColorModeValue(text.base, text.secondary);
 
 	return (
 		<Stack direction={"row"} spacing={4}>
@@ -23,8 +27,8 @@ export const DesktopNav = (props) => {
 							<Link
 								p={2}
 								href={navItem.href ?? "#"}
-								fontSize={"sm"}
-								fontWeight={500}
+								fontSize={"md"}
+								fontWeight={600}
 								color={linkColor}
 								_hover={{
 									textDecoration: "none",

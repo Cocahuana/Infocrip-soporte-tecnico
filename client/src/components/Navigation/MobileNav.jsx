@@ -1,5 +1,5 @@
 import {Stack, useColorModeValue} from "@chakra-ui/react";
-import {MobileNavItem} from "./MovileNavItem";
+import {MobileNavItem} from "./MobileNavItem";
 import {useContext} from "react";
 import {themeContext} from "../../context/themeContext";
 export const MobileNav = (props) => {

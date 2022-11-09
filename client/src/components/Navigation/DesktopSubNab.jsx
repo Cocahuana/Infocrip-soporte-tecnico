@@ -8,7 +8,11 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 import {ChevronRightIcon} from "@chakra-ui/icons";
+import {useContext} from "react";
+import {themeContext} from "../../context/themeContext";
 export const DesktopSubNav = ({label, href, subLabel}) => {
+	const myTheme = useContext(themeContext);
+	const {background, text, accent1} = myTheme;
 	return (
 		<Link
 			href={href}
@@ -21,7 +25,7 @@ export const DesktopSubNav = ({label, href, subLabel}) => {
 				<Box>
 					<Text
 						transition={"all .3s ease"}
-						_groupHover={{color: "pink.400"}}
+						_groupHover={{color: accent1}}
 						fontWeight={500}>
 						{label}
 					</Text>
@@ -35,12 +39,7 @@ export const DesktopSubNav = ({label, href, subLabel}) => {
 					justify={"flex-end"}
 					align={"center"}
 					flex={1}>
-					<Icon
-						color={"pink.400"}
-						w={5}
-						h={5}
-						as={ChevronRightIcon}
-					/>
+					<Icon color={accent1} w={5} h={5} as={ChevronRightIcon} />
 				</Flex>
 			</Stack>
 		</Link>
