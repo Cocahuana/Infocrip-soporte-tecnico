@@ -5,7 +5,7 @@ import {themeContext} from "../../context/themeContext";
 export const MobileNav = (props) => {
 	const {NAV_ITEMS} = props;
 	const myTheme = useContext(themeContext);
-	const {background, text} = myTheme;
+	const {background} = myTheme;
 	return (
 		<Stack
 			bg={useColorModeValue(background.secondary, "gray.800")}

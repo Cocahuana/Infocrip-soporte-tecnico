@@ -12,7 +12,7 @@ import {useContext} from "react";
 import {themeContext} from "../../context/themeContext";
 export const DesktopSubNav = ({label, href, subLabel}) => {
 	const myTheme = useContext(themeContext);
-	const {background, text, accent1} = myTheme;
+	const {accent1} = myTheme;
 	return (
 		<Link
 			href={href}

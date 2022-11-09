@@ -6,6 +6,7 @@ import {
 import { useState } from "react";
 import Home from "./Pages/Home/Home";
 import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer/Footer";
 import { themeContext } from "./context/themeContext";
 import { theme } from "./components/Theme/Theme";
 function App () {
@@ -17,6 +18,7 @@ function App () {
         <Routes>
           <Route path="/" element={ <Home /> } />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </themeContext.Provider>
   );

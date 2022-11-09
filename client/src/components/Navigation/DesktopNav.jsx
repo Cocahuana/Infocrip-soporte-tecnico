@@ -13,7 +13,7 @@ import {themeContext} from "../../context/themeContext";
 export const DesktopNav = (props) => {
 	const {NAV_ITEMS} = props;
 	const myTheme = useContext(themeContext);
-	const {background, text} = myTheme;
+	const {text} = myTheme;
 	const linkColor = useColorModeValue(text.base, text.secondary);
 	const linkHoverColor = useColorModeValue(text.secondary, text.base);
 	const popoverContentBgColor = useColorModeValue(text.base, text.secondary);

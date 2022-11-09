@@ -3,8 +3,6 @@ import {
 	Flex,
 	Text,
 	IconButton,
-	Button,
-	Stack,
 	Collapse,
 	useColorModeValue,
 	useBreakpointValue,
@@ -26,7 +24,7 @@ function Navigation() {
 			<Flex
 				bg={useColorModeValue(background.base, background.secondary)}
 				color={useColorModeValue(text.secondary, text.base)}
-				minH={"60px"}
+				minH={"8vh"}
 				py={{base: 2}}
 				px={{base: 4}}
 				borderBottom={1}
