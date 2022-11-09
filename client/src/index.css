@@ -11,18 +11,19 @@ body {
 
 :root {
 	/* Colors */
-	--color-blue: #0000ff;
+	--color-blue: #007bff;
 	--color-white: #ffffff;
 	--color-orange: #ff9900;
+	--color-black: #000000;
 
-	/* base */
+	/* background */
 	--base-background: var(--color-blue);
-	--base-text: var(--color-white);
-
-	/* Secondary & accent */
 	--secondary-background: var(--color-white);
-	--secondary-text: var(--color-blue);
-	--accent-1: var(--color-orange);
+
+	/* text & accent */
+	--base-text: var(--color-white);
+	--secondary-text: var(--color-black);
+	--accent-1: var(--color-blue);
 
 	/* Fonts */
 }

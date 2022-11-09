@@ -11,18 +11,21 @@ import {
 	useDisclosure,
 } from "@chakra-ui/react";
 import {HamburgerIcon, CloseIcon} from "@chakra-ui/icons";
-import React, {useState} from "react";
-import {Logo} from "./Logo";
 import {MobileNav} from "./MobileNav";
 import {DesktopNav} from "./DesktopNav";
-function Navigation(props) {
+// My Theme
+import {useContext} from "react";
+import {themeContext} from "../../context/themeContext";
+function Navigation() {
 	const {isOpen, onToggle} = useDisclosure();
-
+	const myTheme = useContext(themeContext);
+	const {background, text} = myTheme;
+	// Styling:
 	return (
 		<Box>
 			<Flex
-				bg={useColorModeValue("white", "gray.800")}
-				color={useColorModeValue("gray.600", "white")}
+				bg={useColorModeValue(background.base, background.secondary)}
+				color={useColorModeValue(text.secondary, text.base)}
 				minH={"60px"}
 				py={{base: 2}}
 				px={{base: 4}}
@@ -54,8 +57,11 @@ function Navigation(props) {
 							md: "left",
 						})}
 						fontFamily={"heading"}
-						color={useColorModeValue("gray.800", "white")}>
-						Logo
+						color={useColorModeValue(
+							"var(--base-text)",
+							"var(--secondary-text)"
+						)}>
+						Infocrip S.R.L
 					</Text>
 
 					<Flex display={{base: "none", md: "flex"}} ml={10}>
