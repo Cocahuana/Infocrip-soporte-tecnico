@@ -1,7 +1,15 @@
+import Hero from "../../components/Hero.jsx/Hero";
+import ImageOne from "../../components/ImageOne";
+import ImageTwo from "../../components/ImageTwo";
+import ImageThree from "../../components/ImageThree";
 function Home() {
 	return (
 		<>
-			<div style={{heigth: "800px"}}>Home</div>
+			<ImageOne />
+			<Hero />
+			<ImageThree />
+			<Hero />
+			<ImageTwo />
 		</>
 	);
 }
