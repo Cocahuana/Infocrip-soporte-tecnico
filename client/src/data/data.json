@@ -58,7 +58,7 @@
 		},
 		{
 			"title": "Limpieza y mantenimiento",
-			"description": "Cambio de pasta termica",
+			"description": "Cambio de pasta térmica",
 			"images": [
 				"./assets/destination/image-moon.png",
 				"./assets/destination/image-moon.webp"
@@ -74,7 +74,7 @@
 		},
 		{
 			"title": "Recuperación de datos",
-			"description": "recuperamos tus datos de discos rigidos, solidos, pendrives, etc",
+			"description": "Recuperamos tus datos de discos rigidos, sólidos, pendrives, etc",
 			"images": [
 				"./assets/destination/image-moon.png",
 				"./assets/destination/image-moon.webp"

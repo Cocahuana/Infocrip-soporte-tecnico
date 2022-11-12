@@ -10,6 +10,7 @@ import {
 import {DesktopSubNav} from "./DesktopSubNab";
 import {useContext} from "react";
 import {themeContext} from "../../context/themeContext";
+import {Link as RouterLink} from "react-router-dom";
 export const DesktopNav = (props) => {
 	const {NAV_ITEMS} = props;
 	const myTheme = useContext(themeContext);
@@ -25,8 +26,12 @@ export const DesktopNav = (props) => {
 					<Popover trigger={"hover"} placement={"bottom-start"}>
 						<PopoverTrigger>
 							<Link
+								as={RouterLink}
+								to={
+									navItem.href ??
+									"#Router-dom-btn-not-working"
+								}
 								p={2}
-								href={navItem.href ?? "#"}
 								fontSize={"md"}
 								fontWeight={600}
 								color={linkColor}

@@ -14,6 +14,7 @@ import {DesktopNav} from "./DesktopNav";
 // My Theme
 import {useContext} from "react";
 import {themeContext} from "../../context/themeContext";
+import {Link} from "react-router-dom";
 function Navigation() {
 	const {isOpen, onToggle} = useDisclosure();
 	const myTheme = useContext(themeContext);
@@ -54,7 +55,7 @@ function Navigation() {
 						fontFamily={"heading"}
 						fontWeight={"bold"}
 						color={useColorModeValue(text.base, text.secondary)}>
-						Infocrip S.R.L
+						<Link to='/'>Infocrip S.R.L</Link>
 					</Text>
 
 					<Flex display={{base: "none", md: "flex"}} ml={10}>
@@ -71,16 +72,25 @@ function Navigation() {
 }
 const NAV_ITEMS = [
 	{
-		label: "Inspiration",
+		label: "Inicio",
+		href: "/",
+	},
+	{
+		label: "Servicios",
 		children: [
 			{
-				label: "Explore Design Work",
-				subLabel: "Trending Design to inspire you",
+				label: "Servicio Técnico",
+				subLabel: "Mantenimiento, reparacion de PC, Armado de equipos",
 				href: "#",
 			},
 			{
-				label: "New & Noteworthy",
-				subLabel: "Up-and-coming Designers",
+				label: "Soporte Técnico Remoto",
+				subLabel: "Instalación de software de forma remota",
+				href: "#",
+			},
+			{
+				label: "Laboratorio de Electronica",
+				subLabel: "Reparacion de mothers, fuentes...",
 				href: "#",
 			},
 		],
