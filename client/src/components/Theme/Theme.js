@@ -9,4 +9,6 @@ export const theme = {
 		secondary: "var(--secondary-text)",
 	},
 	accent1: "var(--color-blue)",
+	accent1_active: "var(--color-blue-active)",
+
 };

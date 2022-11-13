@@ -12,6 +12,7 @@ body {
 :root {
 	/* Colors */
 	--color-blue: #5865f2;
+	--color-blue-active: #4b59f8;
 	--color-white: #ffffff;
 	--color-orange: #ff9900;
 	--color-black: #353535;
@@ -24,7 +25,7 @@ body {
 	--base-text: var(--color-white);
 	--secondary-text: var(--color-black);
 	--accent-1: var(--color-blue);
-
+	--accent-1-active: var(--color-blue-active);
 	/* Fonts */
 }
 
