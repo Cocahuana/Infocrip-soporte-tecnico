@@ -7,6 +7,7 @@ import { themeContext } from "../../../context/themeContext"
 import { useContext } from "react";
 import testerBgImg from "./assets/background__home.jpg";
 import { ArrowDownIcon } from "@chakra-ui/icons";
+import Hero from "./Hero";
 export {
     MobileHero,
     TabletHero, 
@@ -17,4 +18,5 @@ export {
     useContext,
     testerBgImg,
     ArrowDownIcon,
+    Hero
 }

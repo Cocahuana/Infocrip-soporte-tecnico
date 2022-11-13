@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import { Stack, Flex, Box } from "@chakra-ui/react";
+import { Stack, Flex } from "@chakra-ui/react";
 import {
 	testerBgImg,
 	landingText,
