@@ -12,7 +12,7 @@ import {
 import { useContext } from "react";
 import { themeContext } from "../context/themeContext";
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
-import techSupport from "./techSupport.svg";
+import techSupport from "./Hero/HeroLanding/techSupport.svg";
 const title = "Soporte Técnico";
 const subtitle = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare nulla quam, 
 	bibendum pellentesque turpis porttitor ut. Etiam in risus augue. Pellentesque leo mi, commodo in lorem et, lacinia volutpat augue.`;
