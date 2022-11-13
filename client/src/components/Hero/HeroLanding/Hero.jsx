@@ -7,6 +7,7 @@ import {
 	TabletHero,
 	DesktopHero,
 } from ".";
+import { ViewMobile, ViewTablet, ViewDesktop } from "../../Breakpoints";
 export default function Hero() {
 	const { title, subtitle } = landingText;
 	return (
@@ -29,34 +30,15 @@ export default function Hero() {
 					h='full'
 					flexDirection='column'
 				>
-					<Box
-						display={{
-							base: "none",
-							md: "none",
-							lg: "flex",
-						}}
-						justifyContent='center'
-					>
+					<ViewDesktop>
 						<DesktopHero title={title} subtitle={subtitle} />
-					</Box>
-					<Box
-						display={{
-							base: "none",
-							md: "flex",
-							lg: "none",
-						}}
-					>
+					</ViewDesktop>
+					<ViewTablet>
 						<TabletHero title={title} subtitle={subtitle} />
-					</Box>
-					<Box
-						display={{
-							base: "flex",
-							md: "none",
-							lg: "none",
-						}}
-					>
+					</ViewTablet>
+					<ViewMobile>
 						<MobileHero title={title} subtitle={subtitle} />
-					</Box>
+					</ViewMobile>
 				</Flex>
 			</Stack>
 		</Parallax>
