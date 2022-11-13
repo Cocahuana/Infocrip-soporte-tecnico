@@ -11,9 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { themeContext } from "../context/themeContext";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
 import techSupport from "./techSupport.svg";
-const title = "Soy una frase o titulo";
+const title = "Soporte Técnico";
 const subtitle = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare nulla quam, 
 	bibendum pellentesque turpis porttitor ut. Etiam in risus augue. Pellentesque leo mi, commodo in lorem et, lacinia volutpat augue.`;
 function ImageOne() {
@@ -40,14 +40,26 @@ function ImageOne() {
 					<Box
 						display={{
 							base: "none",
+							md: "none",
 							lg: "flex",
 						}}
+						justifyContent='center'
 					>
 						<DesktopHero />
 					</Box>
 					<Box
 						display={{
+							base: "none",
+							md: "flex",
+							lg: "none",
+						}}
+					>
+						<TabletHero />
+					</Box>
+					<Box
+						display={{
 							base: "flex",
+							md: "none",
 							lg: "none",
 						}}
 					>
@@ -63,35 +75,135 @@ export default ImageOne;
 
 const DesktopHero = () => {
 	const myTheme = useContext(themeContext);
-	const { accent1 } = myTheme;
+	const { accent1, accent1_active } = myTheme;
 	return (
 		<>
-			<Flex position='absolute' right='15%' top='15%'>
-				<Heading as='h1' size='4xl' color={accent1} mb='10px'>
-					{title}
-				</Heading>
-			</Flex>
-			<Flex
-				position='absolute'
-				right='20%'
-				top='30%'
-				flexDirection='column'
-				maxW='30%'
-			>
-				<Text lineHeight={"30px"} fontSize='20px' textAlign={"justify"}>
-					{subtitle}
-				</Text>
-				<Text
-					mt='10px'
-					lineHeight={"30px"}
-					fontSize='20px'
-					letterSpacing='2px'
-					textAlign={"justify"}
-					fontWeight='800'
-					color={accent1}
+			<Flex flexDirection='column' w='60%' h='100vh'>
+				<Box
+					display='flex'
+					h='30vh'
+					w='100%'
+					alignItems='end'
+					justifyContent='center'
 				>
-					Ver más <ArrowForwardIcon color='white' />{" "}
-				</Text>
+					<Heading as='h1' size='4xl' color={accent1}>
+						{title}
+					</Heading>
+				</Box>
+				<Box display='flex' flexDirection='row' h='50vh'>
+					<Flex
+						flex='1'
+						p='10px'
+						alignItems='center'
+						justifyContent={"center"}
+						flexDirection='column'
+					>
+						<Image
+							src={techSupport}
+							alt='SVG tech support'
+							h='400px'
+							w='400px'
+						/>
+					</Flex>
+					<Flex
+						flex='1'
+						p='10px'
+						alignItems='center'
+						justifyContent='center'
+						flexDirection='column'
+					>
+						<Box>
+							<Text
+								lineHeight={"25px"}
+								fontSize='md'
+								textAlign={"justify"}
+							>
+								{subtitle}
+							</Text>
+						</Box>
+					</Flex>
+				</Box>
+				<Flex h='10vh' justifyContent='center' alignItems='center'>
+					<Button
+						bg={accent1}
+						rounded={"full"}
+						size={"lg"}
+						fontWeight={"normal"}
+						px={6}
+						_hover={{ bg: accent1_active }}
+					>
+						Ver más
+						<ArrowDownIcon color='white' />
+					</Button>
+				</Flex>
+			</Flex>
+		</>
+	);
+};
+
+const TabletHero = () => {
+	const myTheme = useContext(themeContext);
+	const { accent1, accent1_active } = myTheme;
+	return (
+		<>
+			<Flex flexDirection='column'>
+				<Box
+					display='flex'
+					h='30vh'
+					w='100%'
+					alignItems='end'
+					justifyContent='center'
+				>
+					<Heading as='h1' size='4xl' color={accent1}>
+						{title}
+					</Heading>
+				</Box>
+				<Box display='flex' flexDirection='row' h='50vh'>
+					<Flex
+						flex='1'
+						p='10px'
+						alignItems='center'
+						justifyContent={"center"}
+						flexDirection='column'
+					>
+						<Image
+							src={techSupport}
+							alt='SVG tech support'
+							h='400px'
+							w='400px'
+						/>
+					</Flex>
+					<Flex
+						flex='1'
+						p='10px'
+						alignItems='center'
+						justifyContent='center'
+						flexDirection='column'
+					>
+						<Box>
+							<Text
+								lineHeight={"25px"}
+								fontSize='md'
+								textAlign={"justify"}
+							>
+								{subtitle}
+							</Text>
+						</Box>
+					</Flex>
+				</Box>
+				<Flex h='10vh' justifyContent='center' alignItems='center'>
+					<Button
+						bg={accent1}
+						rounded={"full"}
+						size={"lg"}
+						fontWeight={"normal"}
+						px={6}
+						_hover={{ bg: accent1_active }}
+					>
+						Ver más
+						<ArrowDownIcon color='white' />
+					</Button>
+				</Flex>
 			</Flex>
 		</>
 	);
@@ -126,7 +238,7 @@ const MobileHero = () => {
 					mx='10px'
 				>
 					Ver más
-					<ArrowForwardIcon color='white' />
+					<ArrowDownIcon color='white' />
 				</Button>
 				<Image
 					src={techSupport}
